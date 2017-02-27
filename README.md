@@ -1,5 +1,5 @@
 # Agile Retrospective
-A POC for agile retrospective for as sprint in agile.
+A POC for agile retrospective for a sprint in agile.
 
 #Prerequisites
 Nodejs
