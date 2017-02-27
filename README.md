@@ -7,13 +7,13 @@ Nodejs
 #Running the project
 *Installing*
 
---npm install
+npm install
 
 *running the app server*
 
--- cd fake-backend
--- json-server --port 4000 --watch <sprint.json> 
+cd fake-backend
+json-server --port 4000 --watch <sprint.json> 
 
 *running the app user interface*
 
--- npm start
+npm start
