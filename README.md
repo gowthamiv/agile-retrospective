@@ -13,7 +13,7 @@ npm install
 
 cd fake-backend
 
-json-server --port 4000 --watch <sprint.json> 
+json-server --port 4000 --watch sprint.json
 
 *running the app user interface*
 
