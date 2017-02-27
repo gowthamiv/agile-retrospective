@@ -1,0 +1,79 @@
+<div class="landingDiv container">
+    <h2>Test</h2>
+    <div class="col-md-4">
+        <div class="labelDiv">
+            <label>What went well?</label>
+        </div>
+        <div class="contentDiv text-success bg-success" *ngFor="let goodReview of goodReviews; let index = index">
+            <div class="">
+                {{goodReview.comment}}
+                <div>
+                    <span class="goodLikeIcon" (click)="likeGoodReview(goodReview)">
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    </span>
+                    <span>{{goodReview.nofLikes}} likes</span>
+                    <span class="goodDisLikeIcon" (click)="disLikeGoodReview(goodReview)">
+                        <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                    </span>
+                    <span>{{goodReview.nofDisLikes}} dislikes</span></div>
+            </div>
+        </div>
+        <div class="contentDiv bg-success">
+            <textarea col-md-4="3" name="goodText" [(ngModel)]="goodText" (change)="updateGoodArray()">
+            </textarea>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="labelDiv">
+            <label>What went wrong?</label>
+        </div>
+        <div class="contentDiv text-danger bg-danger" *ngFor="let badReview of badReviews; let index = index">
+            <div class="">
+                {{badReview.comment}}
+                <div>
+                    <span class="badLikeIcon" (click)="likeBadReview(badReview)">
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    </span>
+                    <span>{{badReview.nofLikes}} likes</span>
+                    <span class="badDisLikeIcon" (click)="disLikeBadReview(badReview)">
+                        <i class="fa fa-thumbs-o-down" aria-hidden="true" (click)="disLikeBadReview(badReview)"></i>
+                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                    </span>
+                    <span>{{badReview.nofDisLikes}} dislikes</span></div>
+            </div>
+        </div>
+        <div class="contentDiv bg-danger">
+            <textarea rows="3" name="badText" [(ngModel)]="badText" (change)="updateBadArray()">
+            </textarea>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="labelDiv">
+            <label>What could we do differently to improve?</label>
+        </div>
+        <div class="contentDiv text-warning bg-warning" *ngFor="let improvementReview of improvementReviews; let index = index">
+            <div class="">
+                {{improvementReview.comment}}
+                <div>
+                    <span class="improvementLikeIcon" (click)="likeImprovementReview(improvementReview)">
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    </span>
+                    <span>{{improvementReview.nofLikes}} likes</span>
+                    <span class="improvementDisLikeIcon" (click)="disLikeImprovementReview(improvementReview)"> 
+                        <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                    </span>
+                    <span>{{improvementReview.nofDisLikes}} dislikes</span></div>
+            </div>
+        </div>
+        <div class="contentDiv bg-warning">
+            <textarea rows="3" name="improvementText" [(ngModel)]="improvementText" (change)="updateImprovementArray()"></textarea>
+        </div>
+    </div>
+</div>
