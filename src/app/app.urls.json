@@ -1,0 +1,16 @@
+{
+    "comments" : {
+      "get" : {
+        "method" : "get",
+        "url": "db"
+      },
+      "update" : {
+        "method" : "put",
+        "url": "/:comment-type/:id"
+      },
+      "add" : {
+        "method" : "post",
+        "url": "/:comment-type/:id"
+      }
+    }
+}
